@@ -77,7 +77,7 @@
 
     <label class="w-full flex flex-col items-center my-1">
         <span class="w-3/4 text-xs text-gray-900 tracking-wider">Buluşma tarihi ve zamanı:</span>
-        <input type="datetime-local" name="meeting-time" min={now.toISOString().slice(0,16)} bind:value={meetDateTime} class="w-3/4 px-2 py-1"/>
+        <input type="datetime-local" name="meeting-time" min={now.toISOString().slice(0,16)} bind:value={meetDateTime} class="w-3/4 px-2 py-1g"/>
     </label>
 
     <label class="w-full flex flex-col items-center my-1">

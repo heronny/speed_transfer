@@ -25,6 +25,7 @@
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
+		"@supabase/supabase-js": "^2.47.10",
 		"svelte-carousel": "github:vadimkorr/svelte-carousel#pull/142/head"
 	}
 }
