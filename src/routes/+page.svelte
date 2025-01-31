@@ -5,6 +5,8 @@
     import CustomerSatisfaction from "./CustomerSatisfaction.svelte";
     import Comments from "./Comments.svelte";
     import Places from "./Places.svelte";
+
+    let { data } = $props();
 </script>
 
 <Slider />
@@ -17,4 +19,4 @@
 
 <Comments />
 
-<Places />
+<Places places={data.places} fromPage={true}/>
