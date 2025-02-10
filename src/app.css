@@ -1,7 +1,27 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+article {
+    @apply px-4 leading-7 text-zinc-200 tracking-wide
+}
+
+section {
+    @apply my-5
+}
+
+h1 {
+    @apply text-3xl text-white font-bold text-center tracking-wider
+}
+
+h2 {
+    @apply text-lg font-semibold
+}
+
+p {
+    @apply indent-4 py-2
+}

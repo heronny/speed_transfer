@@ -8,9 +8,10 @@
     import tripadvisor from '$lib/images/platforms/footer/tripadvisor.svg';
     import whatsapp from '$lib/images/platforms/footer/whatsapp.svg';
 
+    let { places } = $props();
 </script>
 
-<footer class="w-full bg-neutral-900 px-3 pt-5">
+<footer class="w-full bg-zinc-950 px-3 pt-5 border-t border-zinc-900">
     <h4 class="font-bold text-lg text-white mb-3">İletişim Bilgileri</h4>
     <ul class="flex flex-col gap-y-4 text-yellow-400">
         <li class="hover:brightness-75 transition">
@@ -36,67 +37,39 @@
     <ul class="flex w-full justify-center gap-x-5 my-8">
         <li>
             <a href="https://www.whatsapp.com">
-                <img src={whatsapp} alt="" class="w-9 bg-black rounded-full p-2 hover:invert transition "/>
+                <img src={whatsapp} alt="" class="w-10 bg-zinc-950 rounded-full p-2 hover:invert transition sm:w-12"/>
             </a>
         </li>
         <li>
             <a href="https://www.instagram.com">
-                <img src={instagram} alt="" class="w-9 bg-black rounded-full p-2 hover:invert transition "/>
+                <img src={instagram} alt="" class="w-10 bg-zinc-950 rounded-full p-2 hover:invert transition sm:w-12"/>
             </a>
         </li>
         <li>
             <a href="https://www.tripadvisor.com">
-                <img src={tripadvisor} alt="" class="w-9 bg-black rounded-full p-2 hover:invert transition "/>
+                <img src={tripadvisor} alt="" class="w-10 bg-zinc-950 rounded-full p-2 hover:invert transition sm:w-12"/>
             </a>
         </li>
         <li>
             <a href="https://www.youtube.com">
-                <img src={youtube} alt="" class="w-9 bg-black rounded-full p-2 hover:invert transition "/>
+                <img src={youtube} alt="" class="w-10 bg-zinc-950 rounded-full p-2 hover:invert transition sm:w-12"/>
             </a>
         </li>
     </ul>
 
     <h4 class="font-bold text-white text-lg mb-3">Popüler Destinasyonlar</h4>
-    <ul class="w-full grid grid-cols-3 gap-x-12 text-zinc-300 text-sm">
-        <li class="hover:text-zinc-500 hover:underline transition">
-            <a href="">
-                Merkezantalya
-            </a>
-        </li>
-        <li class="hover:text-zinc-500 hover:underline transition">
-            <a href="">
-                Belek
-            </a>
-        </li>
-        <li class="hover:text-zinc-500 hover:underline transition">
-            <a href="">
-                Kundu
-            </a>
-        </li>
-        <li class="hover:text-zinc-500 hover:underline transition">
-            <a href="">
-                Side
-            </a>
-        </li>
-        <li class="hover:text-zinc-500 hover:underline transition">
-            <a href="">
-                Evrenseki
-            </a>
-        </li>
-        <li class="hover:text-zinc-500 hover:underline transition">
-            <a href="">
-                Beldibi
-            </a>
-        </li>
-        <li class="hover:text-zinc-500 hover:underline transition">
-            <a href="">
-                Kemer
-            </a>
-        </li>
+    <ul class="w-full grid grid-cols-3 gap-x-12 text-zinc-300 text-xs sm:pl-4">
+        {#each places as {name, link}}
+            <li class="hover:text-zinc-500 hover:underline transition duration-200">
+                <a href={link}>
+                    {name}
+                </a>
+            </li> 
+        {/each}
     </ul>
 
     <div class="w-full flex justify-center">
-        <hr class="text-zinc-500 bg-zinc-500 border-zinc-500 my-5 w-5/6"/>
+        <hr class="text-zinc-900 bg-zinc-900 border-zinc-900 my-5 w-5/6 h-[2px]"/>
     </div>
 
     <h4 class="text-xs text-zinc-300 mb-2">© Copyright 2024 | Speed Transfer | Tüm Hakları Saklıdır ®</h4>

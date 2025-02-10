@@ -30,17 +30,17 @@
 
 </script>
 
-<h2 class="font-extrabold text-gray-800 text-2xl text-center mb-7 tracking-wide">NEDEN 
+<h2 class="font-extrabold text-white text-2xl text-center mt-7 mb-12 mx-4 tracking-wide">NEDEN 
     <span class="text-yellow-500">SPEED TRANSFER</span>'İ
     TERCİH ETMELİSİNİZ ?
 </h2>
 
-<div class="grid gap-y-6 text-center">
+<div class="grid gap-y-3 text-center px-6 sm:grid-cols-2 sm:gap-x-3">
     {#each advantages as advantage}
-        <div class="flex flex-col items-center px-6">
-            <img src={advantage.img} alt="All-include pricing" class="w-10 h-10"/>
-            <h3 class="text-lg text-gray-800 font-bold mt-4 mb-1">{advantage.header}</h3>
-            <p class="text-sm">{advantage.paragraph}</p>
+        <div class="flex flex-col items-center px-3 py-10 rounded-md bg-zinc-950">
+            <img src={advantage.img} alt="All-include pricing" class="w-16 h-16"/>
+            <h3 class="text-lg text-white font-bold mt-4 mb-1">{advantage.header}</h3>
+            <p class="text-sm text-zinc-200">{advantage.paragraph}</p>
         </div>
     {/each}
 </div>

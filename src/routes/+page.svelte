@@ -11,12 +11,16 @@
 
 <Slider />
 
-<Reservation />
-
-<Advantages />
-
-<CustomerSatisfaction />
-
-<Comments />
-
-<Places places={data.places} fromPage={true}/>
+<div class="w-full flex flex-col items-center">
+    <div class="w-full md:w-11/12 lg:h-5/6">
+        <Reservation />
+        
+        <Advantages />
+        
+        <CustomerSatisfaction />
+        
+        <Comments />
+        
+        <Places places={data.places} fromPage={true}/>
+    </div>
+</div>

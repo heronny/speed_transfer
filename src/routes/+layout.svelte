@@ -3,7 +3,7 @@
 	import Header from './Header.svelte';
     import Footer from './Footer.svelte';
 
-	let { children } = $props();
+	let { children, data } = $props();
 </script>
 
 <div class="app">
@@ -13,7 +13,7 @@
 		{@render children()}
 	</main>
 
-	<Footer />
+	<Footer places={data.places}/>
 </div>
 
 
@@ -23,7 +23,7 @@
 		display: flex;
 		flex-direction: column;
 		min-height: 100vh;
-		background-color: #f1f1f1;
+		background-image: linear-gradient(to right, #000305 0%, #000 100%);
 	}
 
 	main {

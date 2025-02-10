@@ -49,9 +49,9 @@
     arrows={false}
 >
     {#each Object.entries(sliderImages) as [_path, module], i (_path)}
-        <div class="w-full">
+        <div class="w-screen">
             {#if loaded.includes(i)}
-                <enhanced:img src={module.default} alt="Slider" class="w-full" />
+                <enhanced:img src={module.default} alt="Slider" class="w-screen" />
             {/if}
         </div>
     {/each}
