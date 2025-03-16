@@ -1,11 +1,11 @@
 <script>
     import Image from '../Image.svelte';
-
     let { data } = $props(); 
 </script>
 
 <article itemscope itemtype="http://schema.org/Place">
-    <Image places={data.places} />    <h1 itemprop="name">TEKİROVA: Antik Likya'nın Kapısında Bir Turizm İncisi</h1>
+    <Image places={data.places} />    
+    <h1 itemprop="name">TEKİROVA: Antik Likya'nın Kapısında Bir Turizm İncisi</h1>
     
     <section>
         <h2>Tarihin ve Doğanın Buluştuğu Nokta</h2>

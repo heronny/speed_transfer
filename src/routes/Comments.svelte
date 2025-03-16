@@ -1,6 +1,6 @@
 <script>
     import Carousel from "svelte-carousel/src/components/Carousel/Carousel.svelte";
-    import fiveStar from '$lib/images/symbols/fivestar.png';
+    import starPng from '$lib/images/symbols/star.png';
 
     const comments = [
         {
@@ -14,6 +14,7 @@
     ]
 
     let innerWidth = $state(0)
+    let stars = 5;
 </script>
 
 <svelte:window bind:innerWidth/>
@@ -27,7 +28,11 @@
                 <p class="indent-4">
                     {comment}
                 </p>
-                <img src={fiveStar} alt="Five Star" class="block w-36"/>
+                <div class="flex">
+                    {#each Array(stars) as _, star (star)}
+                        <img src={starPng} alt="Star" class="block w-8 transition-transform hover:scale-125 hover:mx-1"/>
+                    {/each}
+                </div>
                 <h4 class="font-bold self-end mt-1">{owner}</h4>
             </div>
         {/each}

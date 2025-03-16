@@ -41,21 +41,23 @@
 
 </script>
 
-<Carousel
-    let:loaded
-    let:showPrevPage
-    autoplay
-    autoplayDuration={3000}
-    arrows={false}
->
-    {#each Object.entries(sliderImages) as [_path, module], i (_path)}
-        <div class="w-screen">
-            {#if loaded.includes(i)}
-                <enhanced:img src={module.default} alt="Slider" class="w-screen" />
-            {/if}
-        </div>
-    {/each}
-</Carousel>
+    <div class="w-full md:w-5/6 lg:w-[900px] mx-auto mt-2">
+        <Carousel
+            let:loaded
+            let:showPrevPage
+            autoplay
+            autoplayDuration={3000}
+            arrows={false}
+        >
+            {#each Object.entries(sliderImages) as [_path, module], i (_path)}
+                <div>
+                    {#if loaded.includes(i)}
+                        <enhanced:img src={module.default} alt="Slider" class="w-full  lg:rounded-md"/>
+                    {/if}
+                </div>
+            {/each}
+        </Carousel>
+    </div>
 
 
 

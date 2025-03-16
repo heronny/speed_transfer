@@ -14,7 +14,7 @@
     <ul class="pl-4 py-1" transition:slide={{ delay: 50, duration: 100, axis: 'y', }}>
         {#each sublinks as sublink}
             <li aria-current={$page.url.pathname === sublink.href ? 'page' : undefined} class="border-l-2 border-zinc-900">
-                <a href={sublink.href} class="block w-full py-1 text-sm pl-3 hover:brightness-95 hover:text-red-600 duration-200">{ sublink.pageName }</a>
+                <a href={sublink.href} class="block w-full py-1 text-sm pl-3 hover:brightness-95 hover:text-red-600 duration-200" onclick={() => menuOn = false}>{ sublink.pageName }</a>
             </li>
         {/each}
     </ul>

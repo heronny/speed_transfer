@@ -1,9 +1,9 @@
 <script>
-    import { fade } from "svelte/transition";
     import { onMount } from "svelte";
-
+    import { fade } from "svelte/transition";
+    
     let { places, fromPage = false } = $props();
-    const ext = ".png";
+    const ext = ".jpg";
     const images = import.meta.glob('$lib/images/places/antalya/*', { query: { enhanced: true } });
 
     // Reaktif state'ler
@@ -53,10 +53,10 @@
         BÖLGELER
     </h2>
     
-    <div class="grid grid-cols-2 gap-x-2 gap-y-4 px-2 md:grid-cols-3">
+    <div class="grid grid-cols-2 gap-x-2 gap-y-4 px-3 md:grid-cols-3 grid-flow-dense items-start">
         {#each places as {link, name, price}}
             {#key link}  
-                <a class="bg-zinc-900 block rounded-t-md" href={'places/' + link} transition:fade={{ duration: 800 }}>
+                <a class="bg-zinc-950 block rounded-t-md h-fit" href={'places/' + link} transition:fade={{ duration: 800 }}>
                     <div class="w-full overflow-hidden relative rounded-t-md">
                         <img
                             data-src={imageUrls[link + ext]}
@@ -64,7 +64,7 @@
                             alt={name + ' TRANSFER'}
                         />
                         <div class="absolute right-2 bottom-1 text-white flex flex-col items-end cursor-default">
-                            <span class="text-2xl font-extrabold">{price}&#8378;</span>
+                            <span class="text-2xl font-extrabold">&euro;{price}</span>
                             <span class="text-xs">Başlayan Fiyatlarla</span>
                         </div>
                     </div>

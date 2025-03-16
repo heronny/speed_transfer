@@ -4,7 +4,7 @@
     let { places } = $props();
     let place = places.find(obj => "/places/" + obj.link == page.url.pathname);
 
-    const ext = ".png";
+    const ext = ".jpg";
     const images = import.meta.glob('$lib/images/places/antalya/*', 
     { 
         eager: true, 
@@ -16,10 +16,10 @@
 
     const img = Object.entries(images).find(([ path, module], i) => {
         let _path = path.split('/')
-        return _path[_path.length - 1] == place.link + ".png"
+        return _path[_path.length - 1] == place.link + ext
     })
 </script>
 
 <div class="w-full flex flex-col items-center p-4">
-    <enhanced:img src={img[1].default} alt={place.name} class="w-full"/>
+    <enhanced:img src={img[1].default} alt={place.name} class="w-full rounded-lg"/>
 </div>

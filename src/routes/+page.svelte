@@ -12,7 +12,7 @@
 <Slider />
 
 <div class="w-full flex flex-col items-center">
-    <div class="w-full md:w-11/12 lg:h-5/6">
+    <div class="w-full md:w-11/12 lg:w-5/6">
         <Reservation />
         
         <Advantages />

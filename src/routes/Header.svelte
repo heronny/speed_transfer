@@ -58,10 +58,6 @@
     	            "href": "/customer-reviews",
     	            "pageName": "Müşteri Yorumları"
     	        },
-    	        {
-    	            "href": "/blog",
-    	            "pageName": "Blog"
-    	        }
     	    ]
     	},
     	{
@@ -72,19 +68,11 @@
     	    "href": "/contact",
     	    "pageName": "İletişim"
     	},
-    	{
-    	    "href": "/language",
-    	    "pageName": "Türkçe"
-    	},
-    	{
-    	    "href": "/unit",
-    	    "pageName": "Euro"
-    	}
 	]
 </script>
 
 <header class="flex flex-col bg-[rgb(0,0,0)] border-b border-zinc-900 py-2 text-white">
-	<div class="flex flex-row justify-between items-center px-5 py-2">
+	<div class="flex flex-row justify-between items-center px-6 py-2">
 		<a href="/" class="w-40 block" aria-label="Speed Transfer">
 			<enhanced:img src={logo} alt="Speed Transfer"/>
 		</a>
@@ -102,7 +90,7 @@
 					<Submenu headLink={link.pageName} sublinks={link.sublinks}/>
 				{:else}
 					<li class="border-b border-zinc-900" aria-current={$page.url.pathname === link.href ? 'page' : undefined}>
-						<a href={link.href} class="block w-full py-2 pl-3 hover:brightness-95 hover:text-red-600 duration-200">{ link.pageName }</a>
+						<a href={link.href} class="block w-full py-2 pl-3 hover:brightness-95 hover:text-red-600 duration-200" onclick={() => menuOn = false}>{ link.pageName }</a>
 					</li>
 				{/if}
 			{/each}

@@ -12,23 +12,23 @@
 </script>
 
 <footer class="w-full bg-zinc-950 px-3 pt-5 border-t border-zinc-900">
-    <h4 class="font-bold text-lg text-white mb-3">İletişim Bilgileri</h4>
-    <ul class="flex flex-col gap-y-4 text-yellow-400">
+    <h4 class="font-bold text-white mb-3">İletişim Bilgileri</h4>
+    <ul class="flex flex-col gap-y-4 text-yellow-400 text-sm max-w-sm">
         <li class="hover:brightness-75 transition">
             <a href="tel:+90551 453 1938" class="flex items-center gap-x-3">
-                <img src={phone} class="w-8" alt="Phone"/>
+                <img src={phone} class="w-6" alt="Phone"/>
                 <span>+90 551 453 1938</span>
             </a>
         </li>
         <li class="hover:brightness-75 transition">
             <a href="mailto:busterbus47@gmail.com" class="flex items-center gap-x-3">
-                <img src={mail} class="w-8" alt="Mail"/>
+                <img src={mail} class="w-6" alt="Mail"/>
                 <span>busterbus47@gmail.com</span>
             </a>
         </li>
         <li class="hover:brightness-75 transition">
-            <a href="" class="flex items-start gap-x-3">
-                <img src={location} class="w-8" alt="Location"/>
+            <a href="/" class="flex items-center gap-x-3">
+                <img src={location} class="w-6" alt="Location"/>
                 <span>Namık Kemal Mah. 12. Sokak No:23 Daire:5 Esenyurt/İSTANBUL</span>
             </a>
         </li>
@@ -57,11 +57,11 @@
         </li>
     </ul>
 
-    <h4 class="font-bold text-white text-lg mb-3">Popüler Destinasyonlar</h4>
+    <h4 class="font-bold text-white mb-3">Popüler Destinasyonlar</h4>
     <ul class="w-full grid grid-cols-3 gap-x-12 text-zinc-300 text-xs sm:pl-4">
         {#each places as {name, link}}
             <li class="hover:text-zinc-500 hover:underline transition duration-200">
-                <a href={link}>
+                <a href={"/places/" + link}>
                     {name}
                 </a>
             </li> 
